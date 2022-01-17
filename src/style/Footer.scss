@@ -1,0 +1,23 @@
+@at-root #footBox{
+  width: 100%; height:auto;
+  background-color: #303030;
+  padding: 60px 0;
+  h2{
+    width: 165px; height: 42px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+  .foot_area{
+    display: flex;
+    width: 1200px; height: 24px;
+    background-color: #fff;
+    margin: auto; margin-top: 36px;
+  }
+  .copylight{
+    width: 100%; height: auto;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+  }
+}

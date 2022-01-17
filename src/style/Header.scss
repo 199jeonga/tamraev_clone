@@ -1,0 +1,16 @@
+@at-root #headBox{
+  width: 100%; height: 110px;
+  background-color: #aaa;
+  padding-top: 34px;
+  .head_area{
+    width: 1200px; height: 42px;
+    background-color: #bbb;
+    margin: auto;
+  }
+  #gnbBox{
+    display: none;
+    width: 1200px; height: 700px;
+    background-color: #ccc;
+    margin: auto;
+  }
+}
