@@ -13,15 +13,15 @@ export default function Footer(props) {
   
   return (
     <footer id="footBox">
-      <h2><Link to="/"><span class="blind">{props.heading}정보</span></Link></h2>
-      <ul class="foot_area">
+      <h2><Link to="/"><span className="blind">{props.heading}정보</span></Link></h2>
+      <ul className="foot_area">
         {footList.map( (el, inx)=>{
             return (<li key={inx}>
               <NavLink to={el.linkTo}>{el.content}</NavLink>
             </li>)
           }) }
       </ul>
-      <p class="copylight"><span class="capital">copyright</span> &copy; All rights <span class="capital">reserved.</span></p>
+      <p className="copylight"><span className="capital">copyright</span> &copy; All rights <span className="capital">reserved.</span></p>
     </footer>
   )
 }

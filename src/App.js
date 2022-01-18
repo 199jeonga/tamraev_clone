@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './component/Header';
-// import RouterPage from './router/RouterPage';
+import RouterPage from './router/RouterPage';
 import Footer from './component/Footer';
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header heading={siteName} />
-      {/* <RouterPage /> */}
+      <RouterPage />
       <Footer heading={siteName} />
     </div>
   );

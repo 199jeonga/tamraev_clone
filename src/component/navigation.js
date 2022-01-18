@@ -11,7 +11,7 @@ export default function navigation(props) {
   return (
     <nav id="gnbBox">
       <h2>{props.heading}메뉴</h2>
-      <div class="gnb_area">
+      <div className="gnb_area">
         <ul>
           {
             gnbList.map( (el, idx)=>{

@@ -1,0 +1,36 @@
+[
+  {
+    "id":"0",
+    "conTitle" : "인기 콘텐츠",
+    "details" :[
+      {"detail" : "popular content 1", "narr":"제주도 여행 시 전기차 렌트를 저 많이 사용하는 이유", "img" : "./multi/conList_popular01.png"},
+      {"detail" : "popular content 2", "narr":"전기차 렌트할 때 회원카드 빌릴까? 말까?!", "img" : "./multi/conList_popular02.png"},
+      {"detail" : "popular content 3", "narr":"메뉴얼 영상1, 전기차 충전 - 이론편", "img" : "./multi/conList_popular03.png"},
+      {"detail" : "popular content 4", "narr":"전기차 타고 물에 빠지면 감전될 수 있나요?", "img" : "./multi/conList_popular04.png"},
+      {"detail" : "popular content 5", "narr":"현대자동차의 고장난 충전기 지킴이 및 찾아가는 충전 서비스", "img" : "./multi/conList_popular05.png"},
+      {"detail" : "popular content 6", "narr":"주행을 꽤 했는데 주행 가능 거리가 줄지 않는 것이 신기해요!", "img" : "./multi/conList_popular06.png"}
+    ]
+  },
+  {
+    "id":"1",
+    "conTitle" : "전기차 소개",
+    "details" :[
+      {"detail" : "electric car Info 1", "narr":"메뉴얼 영상 1 전기차 충전 - 이론편", "img" : "./multi/conList_info01.png"},
+      {"detail" : "electric car Info 2", "narr":"메뉴얼 영상 2 전기차 충전 - 실습편", "img" : "./multi/conList_info02.png"},
+      {"detail" : "electric car Info 3", "narr":"차세대 이동 수단의 대세로 자리잡은 전기차의 장단점", "img" : "./multi/conList_info03.png"}
+    ]
+  },
+  {
+    "id":"2",
+    "conTitle" : "슬기로운 전기차 여행"
+  }
+  ,
+  {
+    "id":"3",
+    "conTitle" : "충전 및 문제 대처법"
+  },
+  {
+    "id":"4",
+    "conTitle" : "FAQ"
+  }
+]
