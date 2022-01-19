@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch,AiOutlinePlus } from 'react-icons/ai';
 import '../style/conBox.scss';
 
 
@@ -27,14 +27,17 @@ export default function ConBox() {
           <li><Link to="/noticelist">제주 전기차 뉴스</Link></li>
           <li><button type="button"><AiOutlineSearch />검색</button></li>
         </ul>
-        <ul className="con_content_inner">
-          <li>list</li>
-          <li>list</li>
-          <li>list</li>
-          <li>list</li>
-          <li>list</li>
-          <li>list</li>
-        </ul>
+        <div className="con_content_inner">
+          <ul class="con_content_part">
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+          </ul>
+        </div>{/* con_content_inner */}
+        <div className="more_btn"><button type="button"><AiOutlinePlus /></button></div>
       </div>
     </div>
   )
