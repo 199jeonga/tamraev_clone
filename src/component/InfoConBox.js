@@ -20,7 +20,7 @@ function InfoConBox() {
           <li><span className="blind">전기차 충전소에 대한 위치 정보</span></li>
           <li><span className="blind">전기차 안전 정보</span></li>
         </ul>
-        <span>'탐라는 전기차'에서 준비한 꿀팁들로 전기차에 대해 간단하게 알아보며 더욱 더 즐거운 여행을 준비해볼까요?</span>
+        <span className='more_btn'>'탐라는 전기차'에서 준비한 꿀팁들로 전기차에 대해 간단하게 알아보며 더욱 더 즐거운 여행을 준비해볼까요?</span>
       </div>{/* info_content_area */}
     </div>
   )
