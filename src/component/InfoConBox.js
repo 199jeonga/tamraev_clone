@@ -1,4 +1,5 @@
 import React from 'react'
+import '../style/InfoConBox.scss';
 
 function InfoConBox() {
   return (

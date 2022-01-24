@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{Fragment} from 'react'
+import NoticeListConBox from '../component/NoticeListConBox';
 
 export default function NoticeList() {
   return (
-    <div>
-      
-    </div>
+    <Fragment>
+      <NoticeListConBox />
+    </Fragment>
   )
 }

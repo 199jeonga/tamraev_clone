@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/total.scss';
+import '../style/infoViewBox.scss';
 
 function InfoViewBox() {
   return (
