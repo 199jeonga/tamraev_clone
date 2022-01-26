@@ -1,0 +1,92 @@
+// mixin.scss
+@use "sass:math"; 
+
+
+// image
+$imgPath:'../../multi/img/';
+
+@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:cover){
+  background: {
+    image: url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position:$position;
+    size: $size;
+  } 
+  & > span{
+    display: block; 
+    position: absolute; z-index:-1;
+    width: 0; height: 0; overflow: hidden;
+  }
+  @content;
+}
+// blind
+@mixin blind(){
+  display: block; width: 0; height: 0;
+  position: absolute; z-index:-1;
+  overflow: hidden;
+}
+
+
+// size 
+@mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial){
+  display:block; width:100%; height:100%;
+  
+  @if ($file) {
+    @include img($file, $repeat, $position, $size){      @content;    }
+  }
+
+  @content;
+}
+
+// unit
+$baseSize: 16;
+@mixin remUnit($name, $unit){
+  #{$name}: #{$unit} + px;
+  #{$name}: math.div($unit , $baseSize) + rem;
+}
+$baseDevice:320;
+@function vwUnit($size, $deviceWidth:$baseDevice){
+  @return (math.div($size, $deviceWidth) * 100)+vw;
+}
+
+
+// @media query --------------------------------------
+
+
+@mixin mobile(){
+  @media all and (max-width: #{$tablet - 1}){
+    @content;
+  }
+}
+
+@mixin tablet(){
+  @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}) {
+    @content; 
+  }
+}
+
+@mixin handle(){
+  @media all and (max-width:#{$laptop - 1}){
+    @content; 
+  }
+}
+
+@mixin tabletAndLaptop(){
+  @media all and (min-width:$tablet) and (max-width:#{$pc - 1}) {
+    @content; 
+  }
+}
+
+@mixin laptop(){
+  @media all and (min-width:$laptop){
+    @content;
+  }
+}
+
+
+@mixin maxlaptop(){
+  @media all and (min-width:$pc){
+    @content;
+  }
+}
+

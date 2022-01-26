@@ -25,7 +25,7 @@ export default function ConBox() {
           ) }
           <li><Link to="/electroniclist">제주 전기차 충전소 찾기</Link></li>
           <li><Link to="/noticelist">제주 전기차 뉴스</Link></li>
-          <li><button type="button"><AiOutlineSearch />검색</button></li>
+          <li className="search_btn"><button type="button"><AiOutlineSearch />검색</button></li>
         </ul>
         <div className="con_content_inner">
           <ul class="con_content_part">
