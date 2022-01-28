@@ -1,19 +1,40 @@
+@import '../common/variable.scss';
+
 @at-root #headBox{
   width: 100%; height: 110px;
   background-color: #aaa;
   padding-top: 34px;
   .head_area{
+    position: relative;
     width: 1200px; height: 42px;
     background-color: #bbb;
     margin: auto;
     h1{
       width: 100px;
     }
-    .gnb_btn i{
-      display: block;
-      width: 50px; height: 10px;
-      background-color: #fff; 
-    }
+    @at-root .gnb_btn{
+      position: absolute; top: 0; right: 0; z-index: 5000;
+      width: 42px; height: 42px;
+      background-color: #aaa;
+      button{display: block; width: 100%; height: 100%;}//button
+      @at-root .nav_bar{
+        display: block; position: relative; 
+        width: 100%; height: 2px; background-color: $color_white;
+        transition:all 300ms linear;
+        &:before, &::before, &:after, &::after{
+          display: block; position: absolute;
+          content: "";
+          width: 100%; height: 2px;
+          background-color: $color_white;
+          transition:all 300ms linear;
+        }
+        &:before, &::before{bottom:15px;}
+        &:after, &::after{top:15px;}
+      }//nav_bar
+      &.active .nav_bar{height:0;}
+      &.active .nav_bar:before, &.active .nav_bar::before{transform:translateY(15px) rotate(45deg);}
+      &.active .nav_bar:after, &.active .nav_bar::after{transform:translateY(-15px) rotate(-45deg);}
+    }//gnb_btn
   }
 
 }
