@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Fragment} from 'react'
 import {NavLink} from 'react-router-dom';
 import '../style/navigation.scss';
 
@@ -10,7 +10,7 @@ export default function navigation(props) {
   {content:"jeju 전기차 관련 소식", linkTo:"noticelist"}
   ]
   return (
-    <nav id="gnbBox">
+    <Fragment>
       <h2 className='blind'>{props.heading}메뉴</h2>
       <div className="gnb_area">
         <ul className='gnb_img'>
@@ -30,7 +30,6 @@ export default function navigation(props) {
           }
         </ul>
       </div>
-
-    </nav>
+    </Fragment>
   )
 }
