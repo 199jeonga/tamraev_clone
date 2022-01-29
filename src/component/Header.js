@@ -23,7 +23,7 @@ export default function Header(props) {
           </div>
       </div>
       <nav className={checkState ? "gnbBox active" : "gnbBox"}>
-        <Nvigation />
+        <Nvigation fnUseState={fnCheck}/>
       </nav>
     </header>
   )
