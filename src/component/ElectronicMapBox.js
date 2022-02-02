@@ -6,8 +6,12 @@ function ElectronicMapBox() {
     <div id="electronicMapBox">
       <span>&#42; 거리순</span>
       <div className="el_map_area">
-        <div className="list_inner"></div>
-        <div className="map_inner"></div>
+        <div className="list_inner">
+        </div>
+        <div className="map_inner">
+          <div className='map_operating_part'></div>
+          <div className='map_zoom_part'></div>
+        </div>
       </div>
       <p className='el_map_text'>
       <strong>※ 환경부 운영기관 충전소 기준</strong> <br />

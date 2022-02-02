@@ -16,13 +16,25 @@
       background-color: #d0d;
     }
     .map_inner{
+      position: relative;
       width: 800px; height: 100%;
       background-color: #aa0;
+      .map_operating_part{
+        position: absolute; top: 10px; right: 10px;
+        width: 105px; height: 405px;
+        background-color: #fff;
+      }
+      .map_zoom_part{
+        position: absolute; top: 425px; right: 10px;
+        width: 30px; height: 145px;
+        background-color: #fff;
+      }
     }
     .el_map_text{
       width: 100%; height: auto;
       background-color: #a0a;
       margin-top: 10px;
+      text-align: right;
       strong{
         text-align: right;
       }

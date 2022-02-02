@@ -2,6 +2,12 @@ import React from 'react'
 import '../style/ElectronicSearchBox.scss';
 import '../style/total.scss';
 
+import {BsSearch} from 'react-icons/bs';
+import {MdGpsFixed} from 'react-icons/md';
+
+import SearchState from '../component/SearchState';
+import ChargeType from '../component/ChargeType';
+
 
 function ElectronicSearchBox() {
   return (
@@ -12,12 +18,14 @@ function ElectronicSearchBox() {
         <form>
           <fieldset>
             <input id="el_search_input" />
+            <button type="button"><BsSearch /><span className='blind'>검색하기</span></button>
+            <button type="button"><MdGpsFixed /><span className='blind'>내 위치 확인에 대한 권한 요청기</span></button>
 
             <div className="search_state handle_checkbox">
-              <span>운전 상태</span>
+              <SearchState />
             </div>
-            <div className="search_type handle_checkbox">
-              <span>충전 타입</span>
+            <div className="charge_type handle_checkbox">
+              <ChargeType />
             </div>
           </fieldset>
         </form>
