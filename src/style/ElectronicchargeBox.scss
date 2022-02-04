@@ -1,0 +1,51 @@
+@import '../common/variable.scss';
+@import '../common/mixin.scss';
+
+@at-root #electronicSearchBox{
+  .el_search_area{
+    width: 1200px; height: auto;
+    background-color: $color_gray2;
+    margin: 0 auto; padding-top: 45px; padding-bottom: 17px; margin-bottom: 50px;
+  }
+  form{
+    width: 800px; height: 190px;
+    margin: auto;
+  }//form
+  @at-root .el_search_part{
+    width: 100%; height: auto;
+    margin: 0; padding: 0;
+    input{
+      width: 576px; height: 60px;
+      background-color: $color_white; outline: none;
+      text-indent: 20px; font-size: 21px;
+      &::placeholder{
+        font-size: 21px; color:$color_gray1; font-weight: 700;
+      }
+    }//input
+    button{width: 60px; height: 60px;color:$color_white; font-size: 28px; line-height: 28px; }
+    .search_btn{
+      background-color: $color_main1; 
+    }
+    .gps_btn{
+      background-color: $color_main2; margin-left: 8px;
+    }
+  }//el_search_part
+
+  //component 공통 구역
+  .handle_checkbox{
+    display: flex;
+    width: 700px; height: 60px;
+    margin:0 auto; margin-top: 10px; padding: 20px 0;
+    &>span{
+      width: 120px; height: auto;
+      font-size: 16px; text-align: left;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      width: auto; height: auto; margin-right: 20px;
+    }
+  }//handle_checkbox
+
+}//#electronicSearchBox

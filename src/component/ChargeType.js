@@ -1,7 +1,7 @@
-import React,{Fragment} from 'react';
+import React from 'react';
 
 function ChargeType() {
-  return <Fragment>
+  return <div className="charge_type handle_checkbox">
       <span>충전 타입</span>
               <ul>
               <li>
@@ -25,7 +25,7 @@ function ChargeType() {
                   <label for="charge_type_slow">완속</label>
                 </li>
               </ul>
-  </Fragment>;
+  </div>;
 }
 
 export default ChargeType;
