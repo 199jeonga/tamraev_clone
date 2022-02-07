@@ -7,10 +7,9 @@
   .head_area{
     position: relative;
     width: 1200px; height: 42px;
-    background-color: #bbb;
     margin: auto;
     h1{
-      width: 100px;
+      width: 100px; height: auto;
     }
     @at-root .gnb_btn{
       position: absolute; top: 0; right: 0; z-index: 5000;
@@ -30,9 +29,12 @@
         &:before, &::before{bottom:15px;}
         &:after, &::after{top:15px;}
       }//nav_bar
-      &.active .nav_bar{height:0;}
-      &.active .nav_bar:before, &.active .nav_bar::before{transform:translateY(15px) rotate(45deg);}
-      &.active .nav_bar:after, &.active .nav_bar::after{transform:translateY(-15px) rotate(-45deg);}
+      &.active .nav_bar{
+        height:0;
+        &:before, &::before{transform:translateY(15px) rotate(45deg);}
+        &:after, &::after{transform:translateY(-15px) rotate(-45deg);}
+      }
+
     }//gnb_btn
   }
 

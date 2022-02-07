@@ -13,7 +13,12 @@ export default function Footer(props) {
   
   return (
     <footer id="footBox">
-      <h2><Link to="/"><span className="blind">{props.heading}정보</span></Link></h2>
+      <h2>
+        <Link to="/">
+          <img src="/img/logo.png" alt="탐라는 전기차" />
+          <span className="blind">{props.heading}정보</span>
+        </Link>
+      </h2>
       <ul className="foot_area">
         {footList.map( (el, inx)=>{
             return (<li key={inx}>
