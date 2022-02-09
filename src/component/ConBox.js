@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch,AiOutlinePlus } from 'react-icons/ai';
 import '../style/conBox.scss';
-import conBoxContent from './conBoxContent.js';
+import ConBoxContent from './ConBoxContent.js';
 
 
 export default function ConBox() {
@@ -22,8 +22,11 @@ export default function ConBox() {
   }
   const code = conData.filter( (data, index) => index === num );  
 
+  const contitleInner = document.querySelector('.con_title_inner');
+  const conTitleList = document.querySelectorAll('li');
+  const conTitleListWidth = conTitleList.clientWidth;
   const textDeco = {
-    TextDecoration:'none'
+    
   }  
 
   return (
@@ -32,14 +35,16 @@ export default function ConBox() {
       <div className="con_area">
         <ul className="con_title_inner">
           { conData.map( (data, idx)=>
-          <li key={idx}><button type="button" onclick={ (e)=>(fnTab(e, idx)) }><span>{data.conTitle}</span></button></li>
+          <li key={idx}><button type="button" onClick={ (e)=>(fnTab(e, idx)) }><span>{data.conTitle}</span></button></li>
           ) }
-          <li><Link to="/electroniclist" style={textDeco}><span>제주 전기차 충전소 찾기</span></Link></li>
-          <li><Link to="/noticelist" style={textDeco}><span>제주 전기차 뉴스</span></Link></li>
+          <li><Link to="/electroniclist" ><span>제주 전기차 충전소 찾기</span></Link></li>
+          <li><Link to="/noticelist" ><span>제주 전기차 뉴스</span></Link></li>
           <li className="search_btn"><button type="button"><AiOutlineSearch />검색</button></li>
         </ul>
+        <span className='underLine' style={textDeco}></span>
 
-        {code.map( (data,idx) => <conBoxContent key={idx} data={data} /> )}
+        {code.map( (data,idx) => <ConBoxContent key={idx} data={data} /> )}
+
         <div className="more_btn"><button type="button"><AiOutlinePlus /></button></div>
       </div>
     </div>

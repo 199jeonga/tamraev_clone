@@ -21,7 +21,7 @@ export default function Header(props) {
             <span className="blind">{props.heading}</span>
           </Link>
         </h1>
-        <div class={checkState ? "gnb_btn active" : "gnb_btn"} onClick={ fnCheck } >
+        <div className={checkState ? "gnb_btn active" : "gnb_btn"} onClick={ fnCheck } >
           <button type="button">
             <i className="nav_bar"></i><span className="blind">메뉴열기</span>
           </button>

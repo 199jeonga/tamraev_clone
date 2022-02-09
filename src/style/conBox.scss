@@ -5,9 +5,7 @@
   padding: 35px 0 100px;
   margin: 0 auto;
 
-  h2{
-    font-size: 45px;
-  }
+  h2{font-size: 45px;}
 
   @at-root .con_area{
     width: 100%; height: auto;
@@ -19,44 +17,41 @@
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       li{
+        position: relative;
         width: auto; height: auto;
         padding: 0 22px;
         font-weight: 500; line-height: 60px; 
-        span{font-weight: 700;}
-        &:hover {
-          position: relative;
-          &::before{
-            position: absolute; bottom: 0; left: 0;
-            content: ""; display: block;
-            width: 100%; height: 3px;
-            background-color: $color_main1 ;
-            transition: all 500ms ease;
-          }
-          span{color:$color_main1;}
+        // span{font-weight: 700; color:$color_main1;}
         }
+      }//con_title_inner
+
+    .underLine{
+      position: absolute; bottom: 0;
+      height: 3px;
+      background-color: $color_main1;
+    }
+    .search_btn{
+      border-radius: 15px; height: 40px;
+      background-color: #eee; margin-top: 10px;
+      button{
+        display: block;
+        width: 100%; height: 100%;
       }
-      .search_btn{
-        border-radius: 15px; height: 40px;
-        background-color: #eee; margin-top: 10px;
-        button{
-          display: block;
-          width: 100%; height: 100%;
-        }
-      }
-    }//.con_title_inner
+    }//search_btn
+  }//.con_area
 
     .con_content_inner{
+      display: flex; flex-wrap: wrap; justify-content: space-between;
       width: 100%; height: auto;
       margin-top: 50px;
     }//.con_content_inner
+    
     @at-root .con_content_part{
-      display: flex; flex-wrap: wrap; justify-content: space-between;
-      width: 100%; height: auto;
-      li{
-        width: 384px; height: 384px;
-        background-color: #ff0;
-        margin-bottom: 24px;
-        &:nth-last-child(3){margin-bottom: 0;}
+      width: 384px; height: 384px;
+      margin-bottom: 24px;
+      &:nth-last-child(3){margin-bottom: 0;}
+      img{
+        width: 100%; height: 100%;
       }
     }//con_content_part
 
@@ -72,7 +67,7 @@
           width: 100%; height: auto;
           font-size: 16px;
         }
-      }
-    }
-  }//con_area
+      }//button
+    }//more_btn
+
 }//#conBox

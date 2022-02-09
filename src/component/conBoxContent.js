@@ -1,12 +1,12 @@
 import React from 'react';
+import ConBoxDetail from './ConBoxDetail';
 
-function conBoxContent({list}) {
-  return <div className="con_content_inner">
-
-    <ul class="con_content_part">
-        { list.products.map((card,idx)=> <li key={idx} data={card}></li>)}
-      </ul>
-  </div>
+function ConBoxContent({data}) {
+  return (
+  <ul className="con_content_inner">
+      {data.details.map((data,i)=> <ConBoxDetail key={i} data={data} />)}
+  </ul>
+  )
 }
 
-export default conBoxContent;
+export default ConBoxContent;
