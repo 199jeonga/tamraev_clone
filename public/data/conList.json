@@ -8,7 +8,22 @@
       {"detail" : "popular content 3", "narr":"메뉴얼 영상1, 전기차 충전 - 이론편", "img" : "./img/conList_popular03.jpg"},
       {"detail" : "popular content 4", "narr":"전기차 타고 물에 빠지면 감전될 수 있나요?", "img" : "./img/conList_popular04.jpg"},
       {"detail" : "popular content 5", "narr":"현대자동차의 고장난 충전기 지킴이 및 찾아가는 충전 서비스", "img" : "./img/conList_popular05.jpg"},
-      {"detail" : "popular content 6", "narr":"주행을 꽤 했는데 주행 가능 거리가 줄지 않는 것이 신기해요!", "img" : "./img/conList_popular06.jpg"}
+      {"detail" : "popular content 6", "narr":"주행을 꽤 했는데 주행 가능 거리가 줄지 않는 것이 신기해요!", "img" : "./img/conList_popular06.jpg"},
+      {"detail" : "popular content 7", "narr":"전기차 렌트 시 꼭 확인해야 할 페크리스트", "img" : "./img/conList_popular07.jpg"},
+      {"detail" : "popular content 8", "narr":"전기차는 전자파가 많이 발생되나요?", "img" : "./img/conList_popular08.jpg"},
+      {"detail" : "popular content 9", "narr":"전기차 주행거리 늘리는 방법!", "img" : "./img/conList_popular09.jpg"},
+      {"detail" : "popular content 10", "narr":"메뉴얼 영상 전기차 충전 - 실습", "img" : "./img/conList_popular10.jpg"},
+      {"detail" : "popular content 11", "narr":"차세대 이동수단의 대세로 자리잡은 전기차의 장단점", "img" : "./img/conList_popular11.jpg"},
+      {"detail" : "popular content 12", "narr":"히터를 틀었는데 갑자기 주행가능 거리가 업청 줄었어요!", "img" : "./img/conList_popular12.jpg"},
+      {"detail" : "popular content 13", "narr":"스마트하고 편리한 제주도 전기차 충전소 검색방법", "img" : "./img/conList_popular13.jpg"},
+      {"detail" : "popular content 14", "narr":"전기차로 여행하나요? 그럼 충전 플랜을 세워볼까요!", "img" : "./img/conList_popular14.jpg"},
+      {"detail" : "popular content 15", "narr":"비가 자주 오는 제주도에서도 안전한 전기차 충전", "img" : "./img/conList_popular15.jpg"},
+      {"detail" : "popular content 16", "narr":"렌터카 이용 중 고장 및 사고 시 대응 반안", "img" : "./img/conList_popular16.jpg"},
+      {"detail" : "popular content 17", "narr":"충전 시 시동을 꺼야 하나요?", "img" : "./img/conList_popular17.jpg"},
+      {"detail" : "popular content 18", "narr":"비오는 날 충전하면 위험하지 않나요?", "img" : "./img/conList_popular18.jpg"},
+      {"detail" : "popular content 19", "narr":"차량 충전 중 사고가 발생했어요!", "img" : "./img/conList_popular19.jpg"},
+      {"detail" : "popular content 20", "narr":"주행 가능한 거리만큼 안 탔는데 주행거리가 줄어들었어요", "img" : "./img/conList_popular20.jpg"},
+      {"detail" : "popular content 21", "narr":"찾아가는 충전 서비스 편", "img" : "./img/conList_popular21.jpg"}
     ]
   },
   {
@@ -34,10 +49,40 @@
   ,
   {
     "id":"3",
-    "conTitle" : "충전 및 문제 대처법"
+    "conTitle" : "충전 및 문제 대처법",
+    "details" :[
+      {"detail" : "charge and error tip 1", "narr":"전기차 충전 - 실습편", "img" : "./img/charge_error01.jpg"},
+      {"detail" : "charge and error tip 2", "narr":"스마트하고 편리한 제주도 전기차 충전소 검색방법", "img" : "./img/charge_error02.jpg"},
+      {"detail" : "charge and error tip 3", "narr":"전기차 충전 - 찾아가는 충전 서비스편", "img" : "./img/charge_error03.jpg"},
+      {"detail" : "charge and error tip 4", "narr":"비가 자주오는 제주도에서도 안전한 전기차 충전", "img" : "./img/charge_error04.jpg"},
+      {"detail" : "charge and error tip 5", "narr":"렌터카 이용 중 고장 및 사고시 대응 방안", "img" : "./img/charge_error05.jpg"},
+      {"detail" : "charge and error tip 6", "narr":"현대자동차의 고장난 충전기 지킴이 및 찾아가는 충전 서비스", "img" : "./img/charge_error06.jpg"}
+    ]
   },
   {
     "id":"4",
-    "conTitle" : "FAQ"
+    "conTitle" : "FAQ",
+    "details" :[
+      {"detail" : "faq 1", "narr":"전기차는 전자파가 많이 발생되나요?", "img" : "./img/faq1.jpg"},
+      {"detail" : "faq 2", "narr":"전기차 타고 물에 빠지면 감전될 수 있나요?", "img" : "./img/faq2.jpg"},
+      {"detail" : "faq 3", "narr":"주행을 꽤 했는데 주행가능 거리가 줄지 않는 것이 신기해요!", "img" : "./img/faq3.jpg"},
+      {"detail" : "faq 4", "narr":"충전할 때마다 주행 가능 거리가 달라요!", "img" : "./img/faq4.jpg"},
+      {"detail" : "faq 5", "narr":"히터를 틀었는데 갑자기 주행가능 거리가 엄청 줄었어요!", "img" : "./img/faq5.jpg"},
+      {"detail" : "faq 6", "narr":"주행 가능한 거리만큼 안 탔는데 주행거리가 줄어들었어요!", "img" : "./img/faq6.jpg"},
+      {"detail" : "faq 7", "narr":"자동으로 저속모드가 작동됐어요!", "img" : "./img/faq7.jpg"},
+      {"detail" : "faq 8", "narr":"파워다운 경고등(노란색 경고등, 거북이모양)이 켜졌어요!", "img" : "./img/faq8.jpg"},
+      {"detail" : "faq 9", "narr":"엑셀에서 발을 똈는데 브레이크 걸린 것처럼 제동 걸리는 느낌이 나요!", "img" : "./img/faq9.jpg"},
+      {"detail" : "faq 10", "narr":"시동을 켰는데 엔진 소리가 안 나요!", "img" : "./img/faq10.jpg"},
+      {"detail" : "faq 11", "narr":"히터나 에어컨이 안 틀어져요!", "img" : "./img/faq11.jpg"},
+      {"detail" : "faq 12", "narr":"충전 시 시동을 꺼야하나요?", "img" : "./img/faq12.jpg"},
+      {"detail" : "faq 13", "narr":"충전 중 중단이 가능한가요?", "img" : "./img/faq13.jpg"},
+      {"detail" : "faq 14", "narr":"비오는 날 충전하면 위험하지 않나요?", "img" : "./img/faq14.jpg"},
+      {"detail" : "faq 15", "narr":"충전 완료 후, 충전선이 분리가 안 돼요", "img" : "./img/faq15.jpg"},
+      {"detail" : "faq 16", "narr":"충전 중인데 다른 사람이 충전기를 뽑아버리면 어쩌죠?", "img" : "./img/faq16.jpg"},
+      {"detail" : "faq 17", "narr":"렌터카 충전카드를 분식하면 요금지불은 어떻게 하죠?", "img" : "./img/faq17.jpg"},
+      {"detail" : "faq 18", "narr":"방전되었을 땐 어떻게 하죠?", "img" : "./img/faq18.jpg"},
+      {"detail" : "faq 19", "narr":"차량 충전 중 사고가 발생했어요!", "img" : "./img/faq19.jpg"},
+      {"detail" : "faq 20", "narr":"교통사고가 났을 때 전기차라서 더 주의해야할 요소가 있을까요?", "img" : "./img/faq20.jpg"}
+    ]
   }
 ]

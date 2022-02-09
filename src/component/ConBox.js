@@ -10,6 +10,7 @@ export default function ConBox() {
 
   const [num, setNum] = useState(0);
   const [conData, setconData] = useState([]);
+  const [plus, setPlus] = useState(6);
   
   useEffect( ()=>{
     axios.get('./data/conList.json')
@@ -22,12 +23,8 @@ export default function ConBox() {
   }
   const code = conData.filter( (data, index) => index === num );  
 
-  const contitleInner = document.querySelector('.con_title_inner');
-  const conTitleList = document.querySelectorAll('li');
-  const conTitleListWidth = conTitleList.clientWidth;
-  const textDeco = {
-    
-  }  
+  const fnPlus = ()=> {setPlus(plus+6)}
+  const viewData = code.filter( (data, i)=> i < plus);
 
   return (
     <div id="conBox">
@@ -41,11 +38,11 @@ export default function ConBox() {
           <li><Link to="/noticelist" ><span>제주 전기차 뉴스</span></Link></li>
           <li className="search_btn"><button type="button"><AiOutlineSearch />검색</button></li>
         </ul>
-        <span className='underLine' style={textDeco}></span>
+        <span className='underLine'></span>
 
         {code.map( (data,idx) => <ConBoxContent key={idx} data={data} /> )}
 
-        <div className="more_btn"><button type="button"><AiOutlinePlus /></button></div>
+        <div className="more_btn"><button type="button" onClick={fnPlus} ><AiOutlinePlus /></button></div>
       </div>
     </div>
   )

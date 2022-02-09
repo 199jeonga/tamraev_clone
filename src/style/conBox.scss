@@ -41,15 +41,16 @@
   }//.con_area
 
     .con_content_inner{
-      display: flex; flex-wrap: wrap; justify-content: space-between;
+      display: flex; flex-wrap: wrap;
       width: 100%; height: auto;
       margin-top: 50px;
     }//.con_content_inner
     
     @at-root .con_content_part{
       width: 384px; height: 384px;
-      margin-bottom: 24px;
+      margin-bottom: 24px; margin-right: 24px;
       &:nth-last-child(3){margin-bottom: 0;}
+      &:nth-child(3n){margin-right: 0;}
       img{
         width: 100%; height: 100%;
       }
