@@ -19,6 +19,7 @@ export default function ConBox() {
   const fnTab = (e, i) => {
     e.preventDefault();
     setNum(i);
+    setPlus(6);
   };
   const fnPlus = () => {
     setPlus(plus + plusN);
