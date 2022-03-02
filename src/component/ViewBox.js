@@ -1,20 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 import "../style/viewBox.scss";
+import ViewBoxContent from "./ViewBoxContent.js";
 
 export default function ViewBox() {
-  const listData = [
-    "제주도에서 렌트가 가능한 전기차 이미지1",
-    "제주도에서 렌트가 가능한 전기차 이미지2",
-    "제주도에서 렌트가 가능한 전기차 이미지3",
-  ];
-  listData.unshift(listData[listData.length - 1]);
+  const [conData, setData] = useState([]);
+  useEffect(() => {
+    axios.get("./data/viewList.json").then((res) => setData(res.data));
+  }, []);
+  console.log(conData);
+
+  const activeStyle = {
+    zIndex: `${1 * -100}%`,
+  };
 
   return (
     <div id="viewBox">
       <ul className="view_img">
-        <li>
-          <span className="blind">제주도에서 렌트가 가능한 전기차 이미지3</span>
-        </li>
+        {conData.map((data, i) => (
+          <ViewBoxContent key={i} data={data} />
+        ))}
       </ul>
       <div className="view_area">
         <dl className="view_text">

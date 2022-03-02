@@ -1,45 +1,82 @@
-@at-root #viewBox{
+@at-root #viewBox {
   position: relative;
-  width: 100%; height: 510px;
-  background-color: #bbb;
+  width: 100%;
+  height: 510px;
 
-  .view_img{
-    width: 100%; height: 100%;
-    background-color: #ada;
-    li{
-      position: absolute; top: 0; left: 0;
+  .view_img {
+    width: 100%;
+    height: 100%;
+    background-color: #aaa;
+    li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
-  }//view_img
+  } //view_img
 
-  .view_area{
-    position: absolute; z-index: 100; top: 0; left: 50%; transform: translateX(-50%);
-    width: 1200px; height: 100%;
+  .view_area {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 100%;
     margin: 0 auto;
   }
-  .view_text{
-    position: absolute; top: 50%; left: 0; transform: translateY(-50%);
-    width: 550px; height: auto;
-    dt{font-size: 56px; font-weight: 700; text-align: left; margin-bottom: 20px;}
-    dd{font-size: 22px; word-break: keep-all; text-align: left;}
+  .view_text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 550px;
+    height: auto;
+    dt {
+      font-size: 56px;
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    dd {
+      font-size: 22px;
+      word-break: keep-all;
+      text-align: left;
+    }
   }
-  @at-root .view_indicator{
-    position: absolute; top: 50%; right: 20px; transform: translateY(-50%);
-    display: flex; flex-direction: column; justify-content: space-between;
-    width: 10px; height: 100px;
-    li{
-      width: 10px; height: 10px;
+  @at-root .view_indicator {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10px;
+    height: 100px;
+    li {
+      width: 10px;
+      height: 10px;
       border-radius: 10px;
       background-color: #fff;
-      &.active{
+      &.active {
         position: relative;
-        &:before, &::before{
+        &:before,
+        &::before {
           content: "";
-          display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-          width: 30px; height: 30px;
-          border: 1px solid #fff; border-radius: 15px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 30px;
+          height: 30px;
+          border: 1px solid #fff;
+          border-radius: 15px;
           transition: all 500ms ease;
         }
-      }//indicator active
-    }//indicator li
+      } //indicator active
+    } //indicator li
   }
 }
