@@ -2,16 +2,19 @@
   {
     "id": 1,
     "alt": "제주도에서 렌트가 가능한 전기차 이미지1",
-    "src": "./img/main_slider_1.jpg"
+    "src": "./img/main_slider_1.jpg",
+    "indicator": "첫번째 이미지 보기"
   },
   {
     "id": 2,
     "alt": "제주도에서 렌트가 가능한 전기차 이미지2",
-    "src": "./img/main_slider_2.jpg"
+    "src": "./img/main_slider_2.jpg",
+    "indicator": "두번째 이미지 보기"
   },
   {
     "id": 3,
     "alt": "제주도에서 렌트가 가능한 전기차 이미지3",
-    "src": "./img/main_slider_3.jpg"
+    "src": "./img/main_slider_3.jpg",
+    "indicator": "세번째 이미지 보기"
   }
 ]

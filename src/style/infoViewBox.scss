@@ -1,9 +1,12 @@
-@at-root #infoViewBox{
-  width: 1200px; height: auto;
+@at-root #infoViewBox {
+  width: 1200px;
+  height: auto;
   padding: 20px 80px;
+  padding-top: 130px;
   margin: 0 auto;
-  .img{
-    width: 100%; height: 500px;
+  .img {
+    width: 100%;
+    height: 500px;
     background-color: #aaa;
   }
 }

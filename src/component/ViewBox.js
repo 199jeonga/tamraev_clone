@@ -2,17 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
+import { NavLink } from "react-router-dom";
 
 export default function ViewBox() {
   const [conData, setData] = useState([]);
   useEffect(() => {
     axios.get("./data/viewList.json").then((res) => setData(res.data));
   }, []);
-  console.log(conData);
-
-  const activeStyle = {
-    zIndex: `${1 * -100}%`,
-  };
 
   return (
     <div id="viewBox">
@@ -29,15 +25,11 @@ export default function ViewBox() {
           </dd>
         </dl>
         <ul className="view_indicator">
-          <li className="active">
-            <span className="blind">첫번째 이미지 보기</span>
-          </li>
-          <li>
-            <span className="blind">두번째 이미지 보기</span>
-          </li>
-          <li>
-            <span className="blind">세번째 이미지 보기</span>
-          </li>
+          {conData.map((data, i) => (
+            <li key={i}>
+              <span className="blind">{data.indicator}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
