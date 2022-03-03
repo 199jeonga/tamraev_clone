@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
-import { NavLink } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function ViewBox() {
   const [conData, setData] = useState([]);

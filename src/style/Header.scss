@@ -23,7 +23,6 @@
       z-index: 5000;
       width: 42px;
       height: 42px;
-      background-color: #aaa;
       button {
         display: block;
         width: 100%;
@@ -60,10 +59,12 @@
         height: 0;
         &:before,
         &::before {
+          background-color: $color_black1;
           transform: translateY(15px) rotate(45deg);
         }
         &:after,
         &::after {
+          background-color: $color_black1;
           transform: translateY(-15px) rotate(-45deg);
         }
       }

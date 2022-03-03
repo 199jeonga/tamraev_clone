@@ -1,25 +1,57 @@
+//color vriable
+$color_main1: #007fa8;
+$color_main2: #002c5f;
 
-//color vriable 
-$color_main1 : #007fa8;
-$color_main2 : #002c5f;
-
-$color_black1 : #303030;
-$color_gray1 : #666;
-$color_gray2 : #f6f3f2;
-$color_white : #fff;
-
+$color_black1: #303030;
+$color_gray1: #666;
+$color_gray2: #f6f3f2;
+$color_white: #fff;
 
 // responsive size
-$mobile : 320px;
-$tablet : 768px;
-$laptop : 1280px;
-$pc:1921px;
-
+$mobile: 320px;
+$tablet: 768px;
+$laptop: 1280px;
+$pc: 1921px;
 
 //font
-$font_family_en : ('Roboto', sans-serif);
-$font_family_ko : ('nanumsquare', 'KyoboHandwriting2020A', serif);
-$font_weight:(300,400,500,700);
-$font_size:(
-h2:38px, h3:30px, content1:22px, content2:18px, content3:16px, content4:12px, book1:24px, book2:18px
+$font_family_en: ("Roboto", sans-serif);
+$font_family_ko: ("nanumsquare", "KyoboHandwriting2020A", serif);
+$font_weight: (300, 400, 500, 700);
+$font_size: (
+  h2: 38px,
+  h3: 30px,
+  content1: 22px,
+  content2: 18px,
+  content3: 16px,
+  content4: 12px,
+  book1: 24px,
+  book2: 18px,
 );
+
+//list
+$info_content_list: (
+  "info_img_4.png",
+  "info_img_5.png",
+  "info_img_6.png",
+  "info_img_7.png"
+);
+
+//mixin
+$imgPath: "../../public/img/";
+@mixin img($file, $repeat: no-repeat, $position: 50% 50%, $size: cover) {
+  background: {
+    image: url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position: $position;
+    size: $size;
+  }
+  & > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  @content;
+}
