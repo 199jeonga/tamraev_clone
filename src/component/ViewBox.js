@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
-import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; //basic
+import "swiper/css/pagination";
 
 export default function ViewBox() {
   const [conData, setData] = useState([]);
@@ -10,13 +13,43 @@ export default function ViewBox() {
     axios.get("./data/viewList.json").then((res) => setData(res.data));
   }, []);
 
+  SwiperCore.use([Pagination, Navigation]);
+  const [swiper, setSwiper] = useState(null);
+
+  const viewList = {
+    position: "relative",
+    zIndex: 1,
+    width: "100%",
+    height: "510px",
+  };
+  const swiperParams = {
+    Pagination: true,
+    onSwiper: setSwiper,
+  };
+
   return (
     <div id="viewBox">
-      <ul className="view_img">
+      <Swiper
+        style={viewList}
+        {...swiperParams}
+        ref={setSwiper}
+        Navigation
+        Autoplay
+        spaceBetween={50}
+        slidesPerView={1}
+        scrollbar={{ draggable: true }}
+        pagination={{ clickable: true }}
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        ...
+      </Swiper>
+      {/* <ul className="view_img">
         {conData.map((data, i) => (
           <ViewBoxContent key={i} data={data} />
         ))}
-      </ul>
+      </ul> */}
       <div className="view_area">
         <dl className="view_text">
           <dt>탐라는 전기차</dt>
