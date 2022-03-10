@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import SwiperCore, { Pagination, Autoplay } from "swiper";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
@@ -9,41 +9,24 @@ import "swiper/css/pagination";
 
 export default function ViewBox() {
   const [conData, setData] = useState([]);
+
   useEffect(() => {
     axios.get("./data/viewList.json").then((res) => setData(res.data));
   }, []);
 
-  SwiperCore.use([Pagination, Navigation]);
-  const [swiper, setSwiper] = useState(null);
-
-  const viewList = {
-    position: "relative",
-    zIndex: 1,
-    width: "100%",
-    height: "510px",
-  };
-  const swiperParams = {
-    Pagination: true,
-    onSwiper: setSwiper,
-  };
+  SwiperCore.use([Pagination, Autoplay]);
 
   return (
     <div id="viewBox">
+      {/* <Swiper {...swiperParams} ref={setSwiper}> */}
       <Swiper
-        style={viewList}
-        {...swiperParams}
-        ref={setSwiper}
-        Navigation
-        Autoplay
-        spaceBetween={50}
-        slidesPerView={1}
-        scrollbar={{ draggable: true }}
+        className="view_img"
         pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide className="li">Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
-        ...
       </Swiper>
       {/* <ul className="view_img">
         {conData.map((data, i) => (
