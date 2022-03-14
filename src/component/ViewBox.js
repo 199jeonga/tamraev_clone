@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
+import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
-import "swiper/css"; //basic
+import "swiper/css";
 import "swiper/css/pagination";
 
 export default function ViewBox() {
@@ -14,19 +14,29 @@ export default function ViewBox() {
     axios.get("./data/viewList.json").then((res) => setData(res.data));
   }, []);
 
-  SwiperCore.use([Pagination, Autoplay]);
+  SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
   return (
     <div id="viewBox">
-      {/* <Swiper {...swiperParams} ref={setSwiper}> */}
       <Swiper
+        modules={[Pagination, Autoplay, EffectFade]}
+        spaceBetween={30}
         className="view_img"
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
+        effect={"fade"}
       >
-        <SwiperSlide className="li">Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        {conData.map((i, el) => {
+          return (
+            <SwiperSlide
+              style={{
+                backgroundImage: `url(${i.src})`,
+              }}
+            >
+              <ViewBoxContent data={i} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       {/* <ul className="view_img">
         {conData.map((data, i) => (
