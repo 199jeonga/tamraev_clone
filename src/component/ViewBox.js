@@ -4,8 +4,10 @@ import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper";
 import axios from "axios";
 import "../style/viewBox.scss";
 import ViewBoxContent from "./ViewBoxContent.js";
+
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 export default function ViewBox() {
   const [conData, setData] = useState([]);
@@ -20,15 +22,21 @@ export default function ViewBox() {
     <div id="viewBox">
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
-        spaceBetween={30}
         className="view_img"
-        pagination={{ clickable: true }}
+        direction={"vertical"}
+        speed={2000}
+        pagination={{
+          clickable: true,
+        }}
         autoplay={{ delay: 3000 }}
         effect={"fade"}
+        wrapperTag="ul"
       >
         {conData.map((i, el) => {
           return (
             <SwiperSlide
+              tag="li"
+              key={el}
               style={{
                 backgroundImage: `url(${i.src})`,
               }}
@@ -50,13 +58,6 @@ export default function ViewBox() {
             전기차와 함께 제주 여행을 준비하는 당신에게 필요한 모든 정보와 꿀팁!
           </dd>
         </dl>
-        <ul className="view_indicator">
-          {conData.map((data, i) => (
-            <li key={i}>
-              <span className="blind">{data.indicator}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );

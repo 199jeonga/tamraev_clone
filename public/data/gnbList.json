@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "src": "./img/gnb_slider_1.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지1"
+  },
+  {
+    "id": 2,
+    "src": "./img/gnb_slider_2.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지2"
+  },
+  {
+    "id": 3,
+    "src": "./img/gnb_slider_3.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지3"
+  },
+  {
+    "id": 4,
+    "src": "./img/gnb_slider_4.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지4"
+  },
+  {
+    "id": 5,
+    "src": "./img/gnb_slider_5.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지5"
+  },
+  {
+    "id": 6,
+    "src": "./img/gnb_slider_6.jpg",
+    "alt": "제주도에서 렌트 가능한 렌트카 이미지6"
+  }
+]
