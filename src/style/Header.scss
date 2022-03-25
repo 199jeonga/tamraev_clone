@@ -33,7 +33,7 @@
         position: relative;
         width: 100%;
         height: 2px;
-        background-color: $color_white;
+        background-color: $color_black1;
         &:before,
         &::before,
         &:after,
@@ -43,7 +43,7 @@
           content: "";
           width: 100%;
           height: 2px;
-          background-color: $color_white;
+          background-color: $color_black1;
           transition: all 300ms linear;
         }
         &:before,

@@ -6,12 +6,15 @@ import React, { useState } from "react";
 
 export default function Header(props) {
   const [checkState, setCheckState] = useState(false);
-  const headerButtonStyle = `
-    backgroundColor: #fff
-  `;
   const fnCheck = () => {
     setCheckState(!checkState);
   };
+
+  // const [plus, setPlus] = useState(6);
+  // const fnTab = (e, i) => {
+  //   e.preventDefault();
+  //   setPlus(6);
+  // };
 
   return (
     <header id="headBox">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 import "../style/conBox.scss";
 import ConBoxContent from "./ConBoxContent.js";
+import { BsSearch } from "react-icons/bs";
 
 export default function ConBox() {
   const plusN = 6;
@@ -11,6 +12,7 @@ export default function ConBox() {
   const [num, setNum] = useState(0);
   const [conData, setconData] = useState([]);
   const [plus, setPlus] = useState(6);
+  const [checkState, setCheckState] = useState(false);
 
   useEffect(() => {
     axios.get("./data/conList.json").then((res) => setconData(res.data));
@@ -25,7 +27,9 @@ export default function ConBox() {
     setPlus(plus + plusN);
   };
   const code = conData.filter((data, index) => index === num);
-  // console.log(code);
+  const fnCheck = () => {
+    setCheckState(!checkState);
+  };
 
   return (
     <div id="conBox">
@@ -49,11 +53,27 @@ export default function ConBox() {
               <span>제주 전기차 뉴스</span>
             </Link>
           </li>
-          <li className="search_btn">
+          <li
+            className={checkState ? "search_btn active" : "search_btn"}
+            onClick={fnCheck}
+          >
             <button type="button">
               <AiOutlineSearch />
               검색
             </button>
+            <div className="search_part">
+              <form>
+                <fieldset>
+                  <input
+                    id="con_search_input"
+                    placeholder="검색어를 입력해주세요"
+                  />
+                  <button type="button" className="con_search_btn">
+                    <BsSearch />
+                  </button>
+                </fieldset>
+              </form>
+            </div>
           </li>
         </ul>
         <span className="underLine"></span>
