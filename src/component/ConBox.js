@@ -53,30 +53,30 @@ export default function ConBox() {
               <span>제주 전기차 뉴스</span>
             </Link>
           </li>
-          <li
-            className={checkState ? "search_btn active" : "search_btn"}
-            onClick={fnCheck}
-          >
-            <button type="button">
+          <li className="search_btn">
+            <button type="button" onClick={fnCheck}>
               <AiOutlineSearch />
               검색
             </button>
-            <div className="search_part">
-              <form>
-                <fieldset>
-                  <input
-                    id="con_search_input"
-                    placeholder="검색어를 입력해주세요"
-                  />
-                  <button type="button" className="con_search_btn">
-                    <BsSearch />
-                  </button>
-                </fieldset>
-              </form>
-            </div>
           </li>
         </ul>
         <span className="underLine"></span>
+        <div
+          // className="search_part"
+          className={checkState ? "search_part active" : "search_part"}
+        >
+          <form>
+            <fieldset>
+              <input
+                id="con_search_input"
+                placeholder="검색어를 입력해주세요"
+              />
+              <button type="button" className="con_search_btn">
+                <BsSearch />
+              </button>
+            </fieldset>
+          </form>
+        </div>
 
         {code.map((data, idx) => (
           <ConBoxContent key={idx} data={data} plus={plus} />
@@ -88,6 +88,7 @@ export default function ConBox() {
           </button>
         </div>
       </div>
+      {/*con_area*/}
     </div>
   );
 }

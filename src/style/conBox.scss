@@ -16,6 +16,7 @@
     padding-top: 40px;
 
     @at-root .con_title_inner {
+      position: relative;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -23,7 +24,6 @@
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       li {
-        position: relative;
         width: auto;
         height: auto;
         padding: 0 22px;
@@ -32,8 +32,8 @@
         // span{font-weight: 700; color:$color_main1;}
       }
     } //con_title_inner
+
     .search_btn {
-      position: relative;
       border-radius: 15px;
       height: 40px;
       background-color: #eee;
@@ -43,21 +43,37 @@
         width: 100%;
         height: 100%;
       }
-      .search_part {
-        display: none;
-      }
-      &.active .search_part {
+    } //search_btn
+
+    .underLine {
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background-color: $color_main1;
+    }
+
+    .search_part {
+      // margin-top: -150px;
+      display: none;
+      &.active {
+        // transition: margin 500ms ease-in;
         display: block;
-        width: 100%;
+        width: 1200px;
         height: 150px;
         background-color: $color_gray2;
         padding: 45px 0;
+        // margin-top: 0;
         form {
           width: 640px;
           height: 60px;
           margin: 0 auto;
         }
+        fieldset {
+          width: 100%;
+          height: 100%;
+        }
         input {
+          float: left;
           width: 580px;
           height: 60px;
           background-color: $color_white;
@@ -68,15 +84,19 @@
           width: 60px;
           height: 60px;
           background-color: $color_main1;
+          color: $color_white;
+          font-size: 25px;
+          line-height: 25px;
+          &:hover {
+            background-color: $color_main2;
+          }
+          &:focus {
+            background-color: $color_main2;
+            color: $color_gray1;
+          }
         }
-      } //search_part
-    } //search_btn
-    .underLine {
-      position: absolute;
-      bottom: 0;
-      height: 3px;
-      background-color: $color_main1;
-    }
+      }
+    } //search_part
   } //.con_area
 
   .con_content_inner {
